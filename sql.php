@@ -41,7 +41,7 @@ function insert_data($name, $email, $message) {
   $sql = "INSERT INTO your_table (name, email, message) VALUES ('$name', '$email', '$message')";
   $result = mysqli_query($dn, $sql);
   if (!$result) {
-    die('Error inserting data into database: ' . mysqli_error($dn));
+    die('Data Inserion Error Code:' . mysqli_error($dn));
   }
 }
 mysqli_close($dn);
